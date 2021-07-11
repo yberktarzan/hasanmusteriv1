@@ -641,9 +641,10 @@ h3{
 }
 
 .red-btn {
-    border: 1px solid tomato ;
+    border: 1px solid #ffb5c1 ;
     background: transparent;
-    color: tomato;
+    color: #ffb5c1;
+    font-weight: 600;
 }
 
 .red-btn:hover{
@@ -693,7 +694,7 @@ h3{
 
 .contact-col div .fas {
     font-size: 28px;
-    color: tomato;
+    color: #ffb5c1;
     margin: 10px;
     margin-right: 30px;
 }
