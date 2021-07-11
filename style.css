@@ -732,7 +732,9 @@ h3{
     margin-bottom: 20px ;
 }
 
-
+.yanbar ul li:hover {
+    transform: scale(1.1);
+}
 
 /*çok beğendiğim için iconlara da ekledim -sallama efekti bana ait değil- */
 
