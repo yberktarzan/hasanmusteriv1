@@ -1,0 +1,775 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        position: relative;
+      
+}
+
+.header{
+    
+    min-height: 100vh;
+    width: 100%;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.600),rgba(0, 0, 0, 0.600)),  url(resim/arka.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+body{
+    
+    
+    background-color: rgb(231, 231, 231);
+    
+}
+
+/*-------buton--------*/
+
+  .treat-button:hover {
+    background-color: rgba(253, 190, 190, 0.253);
+    transition: 1s;
+  }
+  .treat-button:active {
+    transform: scale(1) translateY(10%);
+    
+  }
+  
+  .treat {
+    --scale-x: 0;
+    --scale-y: 0;
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - .5rem);
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    transform: translate(calc( var(--x) * 1px ), calc( var(--y) * 1px )) translate(-50%, -50%);
+    pointer-events: none;
+    -webkit-animation: treat-enter 0.1s ease-in backwards, treat-exit 300ms linear calc( (var(--lifetime, 3000) * 1ms) - 300ms) forwards;
+            animation: treat-enter 0.1s ease-in backwards, treat-exit 300ms linear calc( (var(--lifetime, 3000) * 1ms) - 300ms) forwards;
+  }
+  @-webkit-keyframes treat-enter {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes treat-enter {
+    from {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes treat-exit {
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes treat-exit {
+    to {
+      opacity: 0;
+    }
+  }
+  .treat .inner {
+    -webkit-animation: inner-rotate 0.6s linear infinite;
+            animation: inner-rotate 0.6s linear infinite;
+    transform: rotate(calc(-1turn * var(--direction) ));
+  }
+  @-webkit-keyframes inner-rotate {
+    to {
+      transform: none;
+    }
+  }
+  @keyframes inner-rotate {
+    to {
+      transform: none;
+    }
+  }
+/*------------buton------------*/
+.nav,ul{
+    list-style-type: none;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 164, 177);
+    display: block;
+    margin: 5px auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.noluyo img{
+    height: 100px;
+}
+
+.text-box{
+    width: 90%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    text-align: center;
+}
+
+.text-box h1{
+    margin-top: 20px;
+    font-family: 'Berkshire Swash', cursive;
+    margin-bottom: 50px;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+}
+
+
+.text-box p{
+    margin-top:10px ;
+    margin-bottom:50px ;
+    color: rgb(143, 143, 143);
+    font-size: 32px;
+}
+
+
+
+.hero-btn{
+    margin-bottom: -40px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border:1px solid rgb(0, 0, 0);
+    padding: 12px 34px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hero-btn:hover{
+    background-color: rgba(253, 190, 190, 0.253);
+    transition: 1s;
+}
+
+nav .fas{
+    display: none;
+} 
+@media (max-width:700px){
+    #yoket{
+        font-size: 0px;
+    }
+    .text-box h1{
+        font-size: 40px;
+    }
+    .text-box p{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+        
+    }
+    .nav-links{
+        position: absolute;
+        
+        width: 0%;
+        top: 0px;
+        right: 30px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.01s;
+    }
+    nav .fas{
+        display: block;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        
+    }
+    .nav-links ul li a{
+        font-size: 0px;
+        
+    }
+    .noluyo img{
+        height: 55px;
+    }
+    
+}
+
+
+
+
+
+/*--------------------course-----------------------*/
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+p{
+    color: dimgrey;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+
+}
+
+
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+
+
+@media (max-width:700px) {
+    .row{
+        flex-direction: column;
+
+    }
+    
+    
+}
+
+
+
+/*-------------------Coffee---------------*/
+
+
+.coffee {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.caffee-col img {
+    width: 100%;
+    display: block;
+}
+
+.caffee-col {
+    flex-basis:32% ;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.layer:hover{
+    background-color: rgba(141, 104, 104, 0.3);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 800;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 40%;
+    opacity: 1;
+}
+
+
+/*-------------ürünler----------------*/
+
+.roww{
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-between;
+
+}
+
+.urunler {
+    
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.urun-col img {
+    width: 100%;
+    display: block;
+}
+
+.urun-col {
+    flex-basis:25% ;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.layerA{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.layerA:hover{
+    background-color: rgba(141, 104, 104, 0.322);
+}
+
+.layerA h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layerA:hover h3 {
+    background-color: rgba(141, 104, 104, 0.541);
+    bottom: 10%;
+    opacity: 1;
+}
+/*------------facilities------------
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.facilities-col img {
+    width:100% ;
+    border-radius:10px ;
+}
+
+.facilities-col{
+    flex-basis: 30%;
+    margin-bottom: 5%;
+    text-align: left;
+
+}
+
+
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+-----------------testimoials-------*/
+
+
+.testimoials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+
+.testimoials-col{
+    margin: 15px;
+    margin-bottom: 40px;
+    flex-basis: 45%;
+    border-radius: 10px;
+    text-align: left;
+    background-color: thistle;
+    padding: 25px;
+    cursor: pointer;
+
+}
+
+
+.testimoials-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimoials-col p{
+    padding: opx;
+}
+.testimoials-col h3{
+    margin-top: 35px;
+    text-align: left;
+
+}
+
+.testimoials-col .fas, .far{
+    color: tomato;
+
+}
+
+/*---------------------call to action------------------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0px;
+
+}
+
+
+@media (max-width:700px) {
+    .cta h1{
+        font-size: 24px;
+
+    }
+    
+}
+
+/*---------------footer----------------*/
+/*
+.footer{
+    background-color: black;
+    text-align: right;
+    width: 100%;
+    padding: 0px 0px;
+}
+
+
+.icons .fab{
+    
+    color: tomato;
+    margin: 0px 13px;
+    cursor: pointer;
+}
+
+.far{
+    color: tomato;
+}
+
+.footer p{
+    text-align: center;
+}
+*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    color: rgb(0, 0, 0);
+    padding: 30px 0px;
+}
+
+
+.footer ul{
+    display: flex;
+    font-size: 50px;
+    margin-bottom: 20px ;
+}
+
+.footer ul li i{
+    color: black;
+    margin: 0px 10px;
+}
+
+.footer p{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    margin-bottom: -30px;
+}
+/*çok beğendiğim için iconlara da ekledim -sallama efekti bana ait değil- */
+.footer ul li i:hover{
+    animation: salla 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes salla {
+    0% { transform: translate(1px, 1px) rotate(0deg);color: #ff4d4d}
+    10% { transform: translate(-1px, -2px) rotate(-1deg);color: #cd84f1 }
+    20% { transform: translate(-3px, 0px) rotate(1deg);color: #c56cf0 }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg);color: #18dcff }
+    50% { transform: translate(-1px, 2px) rotate(-1deg);color: #32ff7e }
+    60% { transform: translate(-3px, 1px) rotate(0deg);}
+    70% { transform: translate(3px, 1px) rotate(-1deg); color: #fff200}
+    80% { transform: translate(-1px, -1px) rotate(1deg); color: #ff9f1a}
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); color: #ff4d4d}
+  }
+
+@media(max-width: 800px){
+    .footer{
+    padding:  80px 15px;
+    }
+}
+
+/*-----------------------About page--------------------*/
+
+
+.sub-header {
+    
+    height: 60vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.600),rgba(0, 0, 0, 0.600)),  url(resim/arka.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+
+}
+
+.sub-header h1 {
+    margin-top: 40px;
+}
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.about-col h1 {
+    padding-top: 0px;
+}
+
+
+.about-col p {
+    padding: 15px 0px 25px;
+    
+}
+
+.red-btn {
+    border: 1px solid tomato ;
+    background: transparent;
+    color: tomato;
+}
+
+.red-btn:hover{
+    color: white;
+}
+
+.beyaz {
+    border: 1px solid rgb(255, 255, 255) ;
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.beyaz:hover{
+    color: rgb(0, 0, 0);
+    background-color: #970000fd;
+}
+
+/*-----------------contact page------------------*/
+
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.contact-us {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fas {
+    font-size: 28px;
+    color: tomato;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+
+.contact-col div p {
+    padding: 0px;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/*-----yanbar------*/
+
+.yanbar ul{
+
+    font-size: 40px;
+    margin-bottom: 20px ;
+}
+
+
+
+/*çok beğendiğim için iconlara da ekledim -sallama efekti bana ait değil- */
+
+
+
+.yanbar ul li i {
+    color: rgb(255, 198, 207);
+    
+}
+
+.yanbar{
+    margin-top: 140px;
+    margin-left: -10px;
+    position: fixed;
+    text-align: center;
+    width: 80px;
+    height: 300px;
+}
+
+@media(max-width: 700px){
+    .yanbar{
+    margin-left: -20px;
+    position: fixed;
+    text-align: center;
+    width: 80px;
+    height: 300px;
+    }
+    .yanbar ul{
+
+        font-size: 25px;
+        margin-bottom: 10px ;
+    }
+    
+
+        .footer ul{
+            display: flex;
+            font-size: 38px;
+            margin-bottom: 20px ;
+        }
+        .footer ul li i:hover{
+            animation: 0s;
+            animation-iteration-count: infinite;
+        }
+}
+
+
+
+
+
+
+
+

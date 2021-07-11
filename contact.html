@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AŞAN Jewellery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="resim/dene1.png" alt="AŞAN Jewellery" > </a>
+            <div class="nav-links" id="navlinks">
+                <i id="yoket" class="fas fa-times" onclick="myMoveA()"></i>
+                <ul>
+                    <li><a id="dene1" href="index.html">Anasayfa</a></li>
+                    <li><a id="dene2" href="about.html">Hakkımızda</a></li>
+                    <li><a id="dene3" href="products.html">Ürünler</a></li>
+                    <li><a id="dene4" href="contact.html">İletşişim</a></li>
+                </ul>
+            </div>
+            <i  class="fas fa-bars" onclick="myMoveB()"></i>
+        </nav>
+        <div class="yanbar">
+            <ul>
+                <li id="fa" ><a  href="#"><i class="fab fa-facebook-square "></i></a></li>
+                <li id="tw" ><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li id="in" ><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                <li id="pr" ><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+                
+            </ul>
+        </div>
+        <h1>~ İletişim ~</h1>
+        <div class="treat-wrapper">
+            <a  class="treat-button"></a>
+            </div>
+            
+            
+    </section>
+<!-----------------------contact page--------------------->
+
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <span>
+                    <i class="fas fa-home"></i>
+                    <h5>AŞAN Jewllery </h5>
+                    <p>avcılar/istanbul</p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <i class="fas fa-phone-volume"></i>
+                    <h5>0212 589 34 34</h5>
+                    <p>Hafta içi 10:00 ila 20:00 saatleri arasında ulaşabilirsiniz</p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <h5>asanjewllery@gmail.com</h5>
+                    <p>e-maillerinizi bekliyoruz</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="form-handler.php" method="POST">
+                <input type="text" name="name" placeholder="Adınız" required>
+                <input type="email" name="email" placeholder="e-mail adresiniz" required>
+                <input type="text" name="subject" placeholder="Konu" required>
+                <textarea name="message" rows="8" placeholder="Mesajınız" required></textarea>
+                <button type="submit" class="hero-btn red-btn">Mesajınızı Gönderiniz</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-----------------------footer--------------------->
+
+ 
+<section class="footer">
+<ul>
+    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+    <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+    <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+</ul>
+<p>AŞAN Jewellery  © 2021 Tüm hakları saklıdır.</p>
+    
+</section>
+
+
+
+
+
+
+
+
+    <!-----------------------menu--------------------->
+
+    <script>
+        function myMoveB() {
+         var yoket = document.getElementById("yoket");
+         var dene1 = document.getElementById("dene1");
+         var dene2 = document.getElementById("dene2");
+         var dene3 = document.getElementById("dene3");
+         var dene4 = document.getElementById("dene4");  
+       var elem = document.getElementById("navlinks");   
+       var pos = 0;
+       var id = setInterval(frame, 5);
+       function frame() {
+         if (pos == 30) {
+           clearInterval(id);
+         } else {
+           pos++; 
+           elem.style.height = '100%';
+           elem.style.right = '0px';
+           elem.style.width = pos + '%';
+           dene1.style.fontSize =  '13px';
+           dene2.style.fontSize =  '13px';
+           dene3.style.fontSize =  '13px';
+           dene4.style.fontSize =  '13px';
+           yoket.style.fontSize =  '20px';
+           
+         }
+       }
+     }
+     
+     function myMoveA() {
+         var yoket = document.getElementById("yoket");
+         var dene1 = document.getElementById("dene1");
+         var dene2 = document.getElementById("dene2");
+         var dene3 = document.getElementById("dene3");
+         var dene4 = document.getElementById("dene4"); 
+       var elem = document.getElementById("navlinks");   
+       var pos = 30;
+       var id = setInterval(frame, 5);
+       function frame() {
+         if (pos == 0) {
+           clearInterval(id);
+         } else {
+           pos--; 
+           elem.style.height = '0%';
+           elem.style.right = '30px';
+           elem.style.width = pos + '%';
+           dene1.style.fontSize =  '0px';
+           dene2.style.fontSize =  '0px';
+           dene3.style.fontSize =  '0px';
+           dene4.style.fontSize =  '0px';
+           yoket.style.fontSize =  '0px';
+           
+         }
+       }
+     }
+     
+     </script>
+     <script  src="./script.js"></script>
+</body>
+</html>
