@@ -641,7 +641,7 @@ h3{
 }
 
 .red-btn {
-    border: 1px solid #ffb5c1 ;
+    border: 2px solid #ffb5c1 ;
     background: transparent;
     color: #ffb5c1;
     font-weight: 600;
@@ -722,6 +722,7 @@ h3{
     margin-bottom: 17px;
     outline: none;
     border: 1px solid #ccc;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
