@@ -316,6 +316,7 @@ h3{
     position: absolute;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 
 
@@ -371,6 +372,47 @@ h3{
     position: relative;
     overflow: hidden;
 
+}
+
+.urun-col-text {
+    margin-bottom: 50px;
+    flex-basis: 35%;
+}
+
+.urun-col-text ul li {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.urun-col-text p {
+    text-align: justify;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.urun-col button {
+    width: 80%;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 18px;
+    border: 2px #fff solid;
+    background-color: #ffc6cf;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.urun-col button:hover {
+    opacity: 0.8;
+}
+
+.urun-col-text h3 {
+    background-color: #ffc6cd86;
+}
+
+.urun-col h1 {
+    margin-top: 90px;
 }
 
 .layerA{
@@ -490,7 +532,7 @@ h3{
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-color: black;
+    background-image:linear-gradient(#ffb5c1b0, #ffb5c162, rgba(0,0,0, 0.1)),  url(resim/dene6.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 15px;
@@ -652,14 +694,15 @@ h3{
 }
 
 .beyaz {
-    border: 1px solid rgb(255, 255, 255) ;
+    border: 2px solid rgb(255, 255, 255) ;
     border-radius: 10px;
     background: transparent;
     color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
 .beyaz:hover{
-    color: #000;
+    color: #fff;
     background-color: #ffb5c1;
     transition: 1.5s;
 }
